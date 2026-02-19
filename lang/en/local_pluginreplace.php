@@ -31,6 +31,7 @@ $string['notinstalled'] = 'Plugin is not installed';
 $string['pluginname'] = 'Plugin replacer';
 $string['pluginreplace:replace'] = 'Replace plugins';
 $string['preview'] = 'Preview changes';
+$string['privacy:metadata'] = 'The Plugin replacer plugin does not store any personal data.';
 $string['replace'] = 'Replace plugin';
 $string['success'] = 'Plugin replaced successfully. Redirecting to upgrade…';
 $string['uploadzip'] = 'Upload plugin ZIP';

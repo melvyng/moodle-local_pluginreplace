@@ -15,26 +15,10 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Executes plugin installation or replacement and redirects to upgrade.
+ * Library callbacks for Plugin Replacer.
  *
  * @package    local_pluginreplace
  * @author     Melvyn Gomez - OpenRanger (melvyng@openranger.com)
  * @copyright  2025 Melvyn Gomez (https://openranger.com/)
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-require_once(__DIR__ . '/../../config.php');
-
-require_login();
-require_capability('local/pluginreplace:replace', context_system::instance());
-require_sesskey();
-
-$zipfile = make_temp_directory('pluginreplace') . '/upload.zip';
-
-\local_pluginreplace\replacer::replace($zipfile);
-
-redirect(
-    new moodle_url('/admin/index.php'),
-    get_string('success', 'local_pluginreplace'),
-    2
-);
